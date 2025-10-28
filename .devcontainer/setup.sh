@@ -15,7 +15,7 @@ sudo rm -rf /var/lib/apt/lists/*
 #export PATH="$HOME/.local/bin:$PATH"
 
 # Install JS project dependencies so require('chai') and mocha are available locally
-npm ci --prefix ./javascript-project install --no-audit --no-fund
+npm --prefix ./javascript-project install --no-audit --no-fund
 
 # run js tests
 npm --prefix ./javascript-project test
@@ -23,7 +23,6 @@ npm --prefix ./javascript-project test
 # Setup Python venv for python-project, install editable package so imports work, then run pytest
 if [ -d ./python-project ]; then
   python3 -m venv ./python-project/.venv
-  # shellcheck disable=SC1091
   . ./python-project/.venv/bin/activate
   python -m pip install --upgrade pip setuptools wheel
 
