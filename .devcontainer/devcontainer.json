@@ -1,0 +1,51 @@
+{
+  "name": "Workshop Environment - JavaScript & Python Testing",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-json",
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-toolsai.jupyter",
+        "hbenl.vscode-mocha-test-adapter",
+        "hbenl.vscode-test-explorer",
+        "ms-vscode.test-adapter-converter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestArgs": [
+          "."
+        ],
+        "mochaExplorer.files": "test/**/*.js",
+        "mochaExplorer.env": {},
+        "mochaExplorer.cwd": "${workspaceFolder}"
+      }
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "forwardPorts": [3000, 8000],
+
+  "portsAttributes": {
+    "3000": {
+      "label": "JavaScript Dev Server"
+    },
+    "8000": {
+      "label": "Python Dev Server"
+    }
+  }
+}
