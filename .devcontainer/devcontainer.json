@@ -3,7 +3,6 @@
   "image": "mcr.microsoft.com/devcontainers/base:alpine",
   "workspaceFolder": "/workspaces/WorkroomPlayTime035_CustomAsserts",
   "postCreateCommand": ".devcontainer/setup.sh",
-  "remoteUser": "codespace",
   "updateContentCommand": "",
   "features": {}
 }
