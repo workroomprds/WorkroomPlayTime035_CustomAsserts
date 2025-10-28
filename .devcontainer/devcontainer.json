@@ -4,14 +4,6 @@
   "workspaceFolder": "/workspaces/WorkroomPlayTime035_CustomAsserts",
   "postCreateCommand": ".devcontainer/setup.sh",
   "updateContentCommand": "",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    },
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.11"
-    }
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -21,6 +13,8 @@
         "ms-toolsai.jupyter",
         "hbenl.vscode-mocha-test-adapter",
         "hbenl.vscode-test-explorer",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
         "ms-vscode.test-adapter-converter"
       ],
       "settings": {
