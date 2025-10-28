@@ -1,24 +1,42 @@
 #!/bin/sh
-set -eu
+set -eux
 
 # apt update + essential packages 
-sudo apt update
+sudo apt-get update
 sudo apt install nodejs npm
 sudo npm install -g mocha chai nodemon
 sudo apt install bash git curl python3 python3-pip build-essential
 sudo apt install python3-venv python3-pytest python3-pytest-cov 
 
+# clean apt cache to reduce image size
+sudo rm -rf /var/lib/apt/lists/*
+
+# Ensure user-local bin is on PATH (for pip --user / pipx installs)
+export PATH="$HOME/.local/bin:$PATH"
+
 # Install JS project dependencies so require('chai') and mocha are available locally
 npm --prefix ./javascript-project install --no-audit --no-fund
 
-# Use pip without cache to avoid extra layer size
-#PY_PKGS="pytest pytest-html pytest-cov pylint"
-#pip3 install $PY_PKGS
-
-# Example: install small npm global tools if needed (keep to a minimum)
-# npm install -g some-small-tool || true
-
+# run js tests
 npm --prefix ./javascript-project test
-( cd ./python-project && PYTHONPATH=. python3 -m pytest )
+
+# Setup Python venv for python-project, install editable package so imports work, then run pytest
+if [ -d ./python-project ]; then
+  python3 -m venv ./python-project/.venv
+  # shellcheck disable=SC1091
+  . ./python-project/.venv/bin/activate
+  python -m pip install --upgrade pip setuptools wheel
+
+  # Prefer editable install so project modules are importable in tests
+  if python -m pip install -e ./python-project >/dev/null 2>&1; then
+    echo "Installed python-project in editable mode."
+  else
+    # fallback: install pytest so tests can run
+    python -m pip install pytest pytest-cov
+  fi
+
+  # Run pytest from the project dir so pytest.ini / conftest are used
+  ( cd ./python-project && PYTHONPATH=. pytest )
+fi
 
 echo "Setup complete."
