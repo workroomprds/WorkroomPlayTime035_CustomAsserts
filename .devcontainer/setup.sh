@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-# Minimal apk update + essential packages (keeps image small)
+# apt update + essential packages 
 sudo apt update
 sudo apt install --no-cache bash git curl nodejs npm python3 py3-pip build-essential
 sudo npm install -g mocha chai nodemon
