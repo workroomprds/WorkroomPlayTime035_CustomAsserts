@@ -6,6 +6,8 @@ This environment is pre-configured with both JavaScript and Python testing frame
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/workroomprds/WorkroomPlayTime035_CustomAsserts)
 
+Once you can see this readme in codespaces, check you can interact with the terminal, and run `bash .devcontainer/setup.sh` to go get all the dependencies. 
+
 
 ## JavaScript Project (Mocha + Chai)
 
@@ -43,8 +45,3 @@ pytest --cov            # Run with coverage report
 - Python tests will appear automatically when you open Python files
 - JavaScript tests are configured to work with the Mocha Test Explorer
 
-## Quick Start
-
-1. Open the integrated terminal
-2. Choose either `javascript-project` or `python-project`
-3. Start coding and testing!
