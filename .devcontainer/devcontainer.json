@@ -31,7 +31,7 @@
         ],
         "mochaExplorer.files": "test/**/*.js",
         "mochaExplorer.env": {},
-        "mochaExplorer.cwd": "${workspaceFolder}"
+        "mochaExplorer.cwd": "${workspaceFolder}/javascript-project"
       }
     }
   },
