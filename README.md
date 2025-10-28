@@ -6,11 +6,14 @@ This environment is pre-configured with both JavaScript and Python testing frame
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/workroomprds/WorkroomPlayTime035_CustomAsserts)
 
-Once you can see this readme.md as a prview in codespaces, your VSCode extensions are running.
-Then check you can interact with the terminal, check you're in the `/workspaces/WorkroomPlayTime035_CustomAsserts/` directory and run `bash .devcontainer/setup.sh` to go get all the dependencies. 
+Once you can see this `readme.md` as a preview in codespaces, your VSCode extensions are running.
+At that point, 
+* check you can interact with the terminal,
+* use `pwd` to check you're in the `/workspaces/WorkroomPlayTime035_CustomAsserts/` directory and
+* run `bash .devcontainer/setup.sh` to go get all the dependencies. 
 
 
-## JavaScript Project (Mocha + Chai)
+## Run JS tests (Mocha + Chai)
 
 Navigate to the `javascript-project` directory:
 
@@ -24,7 +27,7 @@ npm test                # Run tests once
 npm run test:watch      # Run tests in watch mode – it runs when you make a change
 ```
 
-## Python Project (pytest)
+## Run Python tests (pytest)
 
 Navigate to the `python-project` directory and activate the python venv:
 
