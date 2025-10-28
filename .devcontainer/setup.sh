@@ -3,6 +3,7 @@ set -eu
 
 # apt update + essential packages 
 sudo apt update
+sudo apt install npm
 sudo npm install -g mocha chai nodemon
 sudo apt install bash git curl nodejs npm python3 python3-pip build-essential
 sudo apt install python3-venv python3-pytest python3-pytest-cov 
