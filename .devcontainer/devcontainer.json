@@ -1,6 +1,6 @@
 {
   "name": "WorkroomPlayTime035_CustomAsserts",
-  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "workspaceFolder": "/workspaces/WorkroomPlayTime035_CustomAsserts",
   "postCreateCommand": ".devcontainer/setup.sh",
   "updateContentCommand": "",
