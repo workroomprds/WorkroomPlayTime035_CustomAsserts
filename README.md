@@ -2,6 +2,11 @@
 
 This environment is pre-configured with both JavaScript and Python testing frameworks.
 
+## Quick Start - Launch Codespace
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/workroomprds/WorkroomPlayTime035_CustomAsserts)
+
+
 ## JavaScript Project (Mocha + Chai)
 
 Navigate to the `javascript-project` directory:
