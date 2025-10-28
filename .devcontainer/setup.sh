@@ -3,10 +3,10 @@ set -eu
 
 # Minimal apk update + essential packages (keeps image small)
 apk update
-apk add --no-cache bash git curl nodejs npm mocha chai nodemon python3 py3-pip pytest pytest-html pytest-cov pylint build-base
+apk add --no-cache bash git curl nodejs npm mocha chai nodemon python3 py3-pip build-base
 
 # Use pip without cache to avoid extra layer size
-PY_PKGS="pytest"
+PY_PKGS="pytest pytest-html pytest-cov pylint"
 pip3 install --no-cache-dir $PY_PKGS
 
 # Example: install small npm global tools if needed (keep to a minimum)
