@@ -3,10 +3,10 @@ set -eux
 
 # apt update + essential packages 
 sudo apt-get update
-sudo apt install nodejs npm
+sudo apt install -y nodejs npm
 sudo npm install -g mocha chai nodemon
-sudo apt install bash git curl python3 python3-pip build-essential
-sudo apt install python3-venv python3-pytest python3-pytest-cov 
+sudo apt install -y bash git curl python3 python3-pip build-essential
+sudo apt install -y python3-venv python3-pytest python3-pytest-cov 
 
 # clean apt cache to reduce image size
 sudo rm -rf /var/lib/apt/lists/*
