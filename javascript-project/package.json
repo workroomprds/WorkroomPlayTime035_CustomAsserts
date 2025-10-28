@@ -1,0 +1,14 @@
+{
+  "name": "workshop-javascript",
+  "version": "1.0.0",
+  "description": "Workshop JavaScript testing environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js --reporter spec",
+    "test:watch": "mocha test/*.js --reporter spec --watch"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7"
+  }
+}
