@@ -1,19 +1,15 @@
-#!/bin/bash
+#!/bin/sh
+set -eu
 
-# Update package lists
-sudo apt-get update
+# Minimal apk update + essential packages (keeps image small)
+apk update
+apk add --no-cache bash git curl nodejs npm python3 py3-pip build-base
 
-# Install JavaScript dependencies globally
-npm install -g mocha chai nodemon
+# Use pip without cache to avoid extra layer size
+PY_PKGS="pytest"
+pip3 install --no-cache-dir $PY_PKGS
 
-# Install Python testing dependencies
-pip3 install pytest pytest-html pytest-cov
+# Example: install small npm global tools if needed (keep to a minimum)
+# npm install -g some-small-tool || true
 
-# Install local npm dependencies
-cd javascript-project
-npm install
-cd ..
-
-## ? chmod +x .devcontainer/setup.sh
-
-echo "Setup complete! Workshop environment is ready."
+echo "Setup complete."
