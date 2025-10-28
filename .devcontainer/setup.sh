@@ -10,8 +10,10 @@ npm install -g mocha chai nodemon
 pip3 install pytest pytest-html pytest-cov
 
 # Install local npm dependencies
+cd javascript-project
 npm install
+cd ..
 
-chmod +x .devcontainer/setup.sh
+## ? chmod +x .devcontainer/setup.sh
 
 echo "Setup complete! Workshop environment is ready."
