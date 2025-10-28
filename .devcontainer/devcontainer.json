@@ -2,7 +2,7 @@
   "name": "WorkroomPlayTime035_CustomAsserts",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "workspaceFolder": "/workspaces/WorkroomPlayTime035_CustomAsserts",
-  "postCreateCommand": "sh .devcontainer/setup.sh",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   "updateContentCommand": "",
   "customizations": {
     "vscode": {
@@ -18,11 +18,11 @@
         "ms-vscode.test-adapter-converter"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "python.defaultInterpreterPath": "/usr/bin/python3",
         "python.testing.pytestEnabled": true,
         "python.testing.unittestEnabled": false,
         "python.testing.pytestArgs": [
-          "."
+          "python-project"
         ],
         "mochaExplorer.files": "test/**/*.js",
         "mochaExplorer.env": {},
@@ -31,13 +31,8 @@
     }
   },
   "forwardPorts": [3000, 8000],
-
   "portsAttributes": {
-    "3000": {
-      "label": "JavaScript Dev Server"
-    },
-    "8000": {
-      "label": "Python Dev Server"
-    }
+    "3000": { "label": "JavaScript Dev Server" },
+    "8000": { "label": "Python Dev Server" }
   }
 }
