@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { parseStringPromise } = require('xml2js');
+const { DOMParser } = require('@xmldom/xmldom');
 
 describe('MT103_gen', () => {
   let generateMT103;
@@ -16,17 +16,26 @@ describe('MT103_gen', () => {
     expect(generateMT103).to.be.a('function');
   });
 
-  it('should return valid XML', async () => {
+  it('should generate valid XML', () => {
     const result = generateMT103();
-    expect(result).to.be.a('string');
-    
-    await expect(parseStringPromise(result)).to.not.be.rejected;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(result, 'text/xml');
+
+    // Check for parse errors
+    const parseError = doc.getElementsByTagName('parsererror');
+    expect(parseError.length).to.equal(0);
+
+    // Check root element exists
+    expect(doc.documentElement).to.exist;
+
   });
 
-  it('should generate well-formed XML with root element', async () => {
+  it('XML should be labelled a SwiftPayment record', () => {
     const result = generateMT103();
-    const parsed = await parseStringPromise(result);
-    expect(parsed).to.be.an('object');
-    expect(Object.keys(parsed)).to.have.lengthOf.at.least(1);
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(result, 'text/xml');
+
+    // Check root element name
+    expect(doc.documentElement.nodeName).to.equal('SwiftPayment');
   });
 });
