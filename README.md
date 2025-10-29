@@ -1,4 +1,4 @@
-# WorkroomPlayTime035_CustomAsserts Workshop Testing Environment
+# WorkroomPlayTime036_CustomAsserts Workshop Testing Environment
 
 This environment is pre-configured with both JavaScript and Python testing frameworks.
 
