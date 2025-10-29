@@ -1,5 +1,4 @@
-# WorkroomPlayTime036_CustomAsserts Workshop Testing Environment
-
+# Testing Environment for WorkroomPlayTime036 – CustomAsserts 
 This environment is pre-configured with both JavaScript and Python testing frameworks.
 
 ## Quick Start - Launch Codespace
