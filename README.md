@@ -4,12 +4,12 @@ This environment is pre-configured with both JavaScript and Python testing frame
 
 ## Quick Start - Launch Codespace
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/workroomprds/WorkroomPlayTime035_CustomAsserts)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/workroomprds/WorkroomPlayTime036_CustomAsserts)
 
 Once you can see this `readme.md` as a preview in codespaces, your VSCode extensions are running.
 At that point, 
 * check you can interact with the terminal,
-* use `pwd` to check you're in the `/workspaces/WorkroomPlayTime035_CustomAsserts/` directory and
+* use `pwd` to check you're in the `/workspaces/WorkroomPlayTime036_CustomAsserts/` directory and
 * run `bash .devcontainer/setup.sh` to go get all the dependencies. 
 
 
