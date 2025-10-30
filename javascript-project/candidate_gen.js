@@ -7,7 +7,7 @@ const make_candidates = function() {
         const types = ["base", "high", "mighty"]
         const states = ["inactive", "active", "suspended", "removed"]
         let output = []
-        console.log(set)
+
         set.forEach(el => {
             const type = types[el];
             const s = states[Math.floor(4*Math.random())]
