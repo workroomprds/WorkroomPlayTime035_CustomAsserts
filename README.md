@@ -5,8 +5,11 @@ This environment is pre-configured with both JavaScript and Python testing frame
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/workroomprds/WorkroomPlayTime036_CustomAsserts)
 
-Once you can see this `readme.md` as a preview in codespaces, your VSCode extensions are running.
-At that point, 
+You can look at the code as soon as you like – but you'll need to run `setup.sh` to get to a point where you can run tests.
+
+Wait for your browser-based VSCode to finish loading extensions, and you should see this `readme.md` as a pretty preview (perhaps not if you've already been poking about).
+
+At that point, or before if you feel daring...
 * check you can interact with the terminal,
 * use `pwd` to check you're in the `/workspaces/WorkroomPlayTime036_CustomAsserts/` directory and
 * run `bash .devcontainer/setup.sh` to go get all the dependencies. 
@@ -38,10 +41,13 @@ source .venv/bin/activate
 Run tests:
 ```bash
 python -m pytest                  # Run all tests
+python -m pytest -s               # Run showing output of `print()`
 python -m pytest -v               # Run with verbose output
 python -m pytest tests/           # Run tests in specific directory
 python -m pytest --cov            # Run with coverage report
 ```
+
+Note - just running `pytest` may run some but not all tests...
 
 ## VS Code Integration 
 
