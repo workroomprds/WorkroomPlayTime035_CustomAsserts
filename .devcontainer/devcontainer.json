@@ -1,7 +1,7 @@
 {
-  "name": "WorkroomPlayTime035_CustomAsserts",
+  "name": "WorkroomPlayTime036_CustomAsserts",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "workspaceFolder": "/workspaces/WorkroomPlayTime035_CustomAsserts",
+  "workspaceFolder": "/workspaces/WorkroomPlayTime036_CustomAsserts",
   "updateContentCommand": "",
   "customizations": {
     "vscode": {
