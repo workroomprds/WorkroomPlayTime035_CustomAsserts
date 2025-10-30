@@ -1,4 +1,4 @@
-MT103_gen = function() {
+const generateMT103 = function() {
     const validrecord = `<?xml version="1.0" encoding="UTF-8"?>
 <SwiftPayment>
   <MessageType>MT103</MessageType>
@@ -15,3 +15,5 @@ MT103_gen = function() {
 </SwiftPayment>`
     return(validrecord);
 }
+
+module.exports = { generateMT103 };
